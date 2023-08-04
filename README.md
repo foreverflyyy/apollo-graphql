@@ -1,3 +1,5 @@
 # apollo-graphql
 
-rm -rf .git
+- `rm -rf .git`
+- `nest g app`
+- `nest g resource`
