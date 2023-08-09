@@ -2,22 +2,23 @@ import FormForRequest from "@/common/components/FormForRequest";
 import {gql} from "@apollo/client";
 import {getClient} from "@/common/lib/apollo-client";
 
-const getInfo = async () => {
-    const userQuery = gql`
-        query ExampleQuery {
-          continents {
-            name,
-            code
-          }
-        }
-    `
-    const { data } = await getClient().query({ query: userQuery });
-    return data;
+const query = gql`
+    query ExampleQuery {
+      continents {
+        name,
+        code
+      }
+    }
+`
+
+interface Response {
+    continents: { name: string; code: string;}[];
 }
 
-export default function Page() {
+export default async function Page() {
 
-    const info: any = getInfo();
+    const {data} = await getClient().query<Response>({query});
+    console.log(data.continents);
 
     return (
         <div className="flex h-screen flex-col items-center justify-center">
