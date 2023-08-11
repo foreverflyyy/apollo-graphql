@@ -12,14 +12,17 @@ const CreatePostForm = () => {
 
     const [createPost] = useMutation(CREATE_POST);
 
-    const handlerClickRequest = () => {
-        createPost({
+    const handlerClickRequest = async () => {
+        await createPost({
             variables: {
                 id: Date.now(),
                 authorId,
                 body
             }
         })
+
+        setAuthorId("");
+        setBody("");
     };
 
     return (

@@ -7,16 +7,23 @@ const MyHeader = () => {
             <div className={"h-full px-10 flex items-center justify-between"}>
                 <Link
                     href={"/postsThroughApi"}
-                    className={"text-xl text-white hover:text-black duration-300"}
+                    className={"text-md text-white hover:text-black duration-300"}
                 >
                     Posts through Api
                 </Link>
 
                 <Link
-                    href={"/postsThroughServer"}
-                    className={"text-xl text-white hover:text-black duration-300"}
+                    href={"/postsThroughClient"}
+                    className={"text-md text-white hover:text-black duration-300"}
                 >
-                    Posts through Backend
+                    Posts through Client Component
+                </Link>
+
+                <Link
+                    href={"/postsThroughServer"}
+                    className={"text-md text-white hover:text-black duration-300"}
+                >
+                    Posts through Server Components
                 </Link>
             </div>
         </div>

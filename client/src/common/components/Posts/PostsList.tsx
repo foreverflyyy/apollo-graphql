@@ -9,13 +9,17 @@ interface Response {
 }
 
 const getPosts = async () => {
-    const {data} = await getClient().query<Response>({query: GET_POSTS});
+    const {data} = await getClient().query<Response>({
+        query: GET_POSTS,
+        fetchPolicy: "no-cache",
+    });
     return data;
 }
 
 const PostsList = async () => {
 
     const {posts} = await getPosts();
+    console.log(posts)
 
     return (
         <>
