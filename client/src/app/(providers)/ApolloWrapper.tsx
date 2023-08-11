@@ -1,5 +1,4 @@
 "use client";
-// ^ this file needs the "use client" pragma
 
 import { ApolloLink, HttpLink } from "@apollo/client";
 import {
@@ -11,7 +10,7 @@ import {
 
 function makeClient() {
     const httpLink = new HttpLink({
-        uri: "https://countries.trevorblades.com",
+        uri: "http://localhost:5000/graphql",
         fetchOptions: { cache: "no-store" },
     });
 
