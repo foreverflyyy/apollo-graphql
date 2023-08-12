@@ -8,6 +8,8 @@
 <img align="left" alt="graphql" width="30px" style="padding-right:10px;" src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg" />
 <img align="left" alt="graphql" width="30px" style="padding-right:10px;" src="https://global.discourse-cdn.com/business5/uploads/apollographql/original/1X/25bd5104d61020fe4dc0777a5919cd009bca633e.png" />
 
+<br/>
+
 # Commands for server start:
 - `npm run start:dev users`
 - `npm run start:dev posts`
